@@ -29,7 +29,7 @@ public class Gerador {
     public void gerarImagemPPMMonoCromatica(String URL, int linha, int coluna, int bits) throws FileNotFoundException {
         PrintStream gravarArq = new PrintStream(URL);
 
-        gravarArq.print("P3\n" + coluna + " " + linha + "\n" + "255\n");
+        gravarArq.print("P2\n" + coluna + " " + linha + "\n" + "255\n");
 
         int matriz[][] = new int[linha][coluna];
 
@@ -39,7 +39,7 @@ public class Gerador {
             for (int j = 0; j < coluna; j++) {
                 double valor = (255 / bits) * (gerador.nextInt(bits) + 1);
                 matriz[i][j] = (int) valor;
-                gravarArq.print("0   " + matriz[i][j]+"   0   ");
+                gravarArq.print(matriz[i][j] + "   ");
                 if(j == (coluna-1)){
                     gravarArq.print("\n");
                 }
