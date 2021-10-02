@@ -11,6 +11,6 @@ public class Principal {
         Gerador imagem = new Gerador();
 
         String URL = "src/Util/imagemPPM.txt";
-        imagem.gerarImagemPPMMonoCromatica(URL,108,192,8);
+        imagem.gerarImagemPPMColorida(URL,108,192,8);
     }
 }
