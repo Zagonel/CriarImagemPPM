@@ -2,9 +2,9 @@ package Classes;
 
 public class Pixel {
 
-    private int Red = 0;
-    private int Blue = 0;
-    private int Grean = 0;
+    private int Red;
+    private int Blue;
+    private int Grean;
 
     public int getRed() {
         return Red;
